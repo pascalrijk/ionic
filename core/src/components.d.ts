@@ -2739,23 +2739,15 @@ declare global {
      * The color to use from your Sass `$colors` map. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information, see [Theming your App](/docs/theming/theming-your-app).
      */
     'color': string;
-    /**
-     * If true, the label will sit alongside an input. Defaults to `false`.
-     */
-    'fixed': boolean;
-    /**
-     * If true, the label will float above an input when the value is empty or the input is focused. Defaults to `false`.
-     */
-    'floating': boolean;
     'getText': () => string;
     /**
      * The mode determines which platform styles to use. Possible values are: `"ios"` or `"md"`. For more information, see [Platform Styles](/docs/theming/platform-specific-styles).
      */
     'mode': 'ios' | 'md';
     /**
-     * If true, the label will be stacked above an input. Defaults to `false`.
+     * The position determines where and how the label behaves inside an item. Possible values are: 'inlined' | 'fixed' | 'stacked' | 'floating'
      */
-    'stacked': boolean;
+    'position': 'inline' | 'fixed' | 'stacked' | 'floating' | undefined;
   }
   var HTMLIonLabelElement: {
     prototype: HTMLIonLabelElement;
@@ -2779,14 +2771,6 @@ declare global {
        */
       'color'?: string;
       /**
-       * If true, the label will sit alongside an input. Defaults to `false`.
-       */
-      'fixed'?: boolean;
-      /**
-       * If true, the label will float above an input when the value is empty or the input is focused. Defaults to `false`.
-       */
-      'floating'?: boolean;
-      /**
        * The mode determines which platform styles to use. Possible values are: `"ios"` or `"md"`. For more information, see [Platform Styles](/docs/theming/platform-specific-styles).
        */
       'mode'?: 'ios' | 'md';
@@ -2795,9 +2779,9 @@ declare global {
        */
       'onIonStyle'?: (event: CustomEvent) => void;
       /**
-       * If true, the label will be stacked above an input. Defaults to `false`.
+       * The position determines where and how the label behaves inside an item. Possible values are: 'inlined' | 'fixed' | 'stacked' | 'floating'
        */
-      'stacked'?: boolean;
+      'position'?: 'inline' | 'fixed' | 'stacked' | 'floating' | undefined;
     }
   }
 }
